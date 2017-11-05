@@ -96,7 +96,7 @@ public class CuboTests {
                 .content(this.json(new SolicitudPruebas(100,listaDeCasosDePrueba)))
                 .contentType(contentType))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.mesaje", Matchers.is("||this.solicitudPruebas.getPruebas()<1")))
+                .andExpect(jsonPath("$.mesaje", Matchers.is("La cantidad de pruebas no es valida")))
         ;
     }
 
